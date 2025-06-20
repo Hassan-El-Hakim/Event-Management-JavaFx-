@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.orgController">
+    <Button fx:id="backButton" layoutX="20.0" layoutY="20.0" onAction="#goBack" styleClass="secondary-button" text="Back" />
+    <VBox layoutY="60" spacing="15" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <Label styleClass="panel-title" text="Organizers Management" />
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+        <HBox spacing="10">
+            <Button onAction="#deleteOrganizer" styleClass="primary-button" text="Delete" />
+        </HBox>
+        <ListView fx:id="organizerListView" prefHeight="250">
+            <placeholder>
+                <Label styleClass="setting-label" text="No organizers available" />
+            </placeholder>
+        </ListView>
+    </VBox>
+</AnchorPane>

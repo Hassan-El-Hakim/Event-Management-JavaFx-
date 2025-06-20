@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: white; -fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.OrganizerProfileController">
+    <VBox alignment="TOP_CENTER" maxHeight="Infinity" maxWidth="Infinity" prefHeight="600" prefWidth="600" spacing="20" VBox.vgrow="ALWAYS">
+
+        <!-- Back Icon -->
+        <HBox alignment="TOP_LEFT">
+            <Button fx:id="backIconButton" onAction="#backToMainScene" style="-fx-background-color: transparent;">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24">
+                        <image>
+                            <Image url="@Images/backicon.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+      <HBox>
+         <children>
+      
+              <!-- Title -->
+              <Label alignment="CENTER" maxWidth="Infinity" prefHeight="35.0" prefWidth="630.0" style="-fx-font-size: 18pt; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Organizer Profile" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label fx:id="InvalidMessage" alignment="CENTER" prefHeight="34.0" prefWidth="659.0" textFill="#f20404">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+
+        <!-- Form -->
+        <GridPane fx:id="profileForm" hgap="10" prefHeight="279.0" prefWidth="600.0" vgap="15" VBox.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #7f8c8d;" text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="organizerUsernameField" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #7f8c8d;" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <HBox alignment="CENTER_LEFT" spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <PasswordField fx:id="organizerPasswordField" HBox.hgrow="ALWAYS" />
+                <TextField fx:id="organizerVisiblePasswordField" visible="false" HBox.hgrow="ALWAYS" />
+                <Button fx:id="togglePasswordButton" onAction="#togglePasswordVisibility" style="-fx-background-color: transparent; -fx-padding: 0;">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <image>
+                                <Image url="@Images/eye.jpg" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #7f8c8d;" text="Birth Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <DatePicker fx:id="organizerDobPicker" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #7f8c8d;" text="Balance:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="organizerWalletBalanceField" editable="false" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <HBox alignment="CENTER" spacing="10" GridPane.columnSpan="2" GridPane.rowIndex="8">
+                <Button onAction="#saveOrganizerDetails" prefWidth="100" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold;" text="Save" />
+            </HBox>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </VBox>
+</StackPane>

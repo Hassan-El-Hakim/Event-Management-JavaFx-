@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane fx:id="cardPane" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo2.EventCardController"
+            prefHeight="80.0" prefWidth="400.0"
+            style="-fx-background-color: #f0f0f0; -fx-background-radius: 10;">
+
+    <HBox spacing="20" alignment="CENTER_LEFT" AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="10"
+          AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <VBox spacing="5" style="-fx-padding: 10; -fx-border-color: #ccc;">
+            <Label fx:id="eventTitle" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Event Title"/>
+            <Label fx:id="eventDate" style="-fx-font-size: 14px;" text="Date"/>
+        </VBox>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="eventCategory" style="-fx-font-size: 14px; -fx-text-fill: gray;" text="Category"/>
+    </HBox>
+
+</AnchorPane>

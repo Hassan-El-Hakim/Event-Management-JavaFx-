@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.AdminSignupController">
+   <left>
+      <AnchorPane fx:id="leftAnchorPane" prefHeight="615.0" prefWidth="343.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="BackgroundImage" fitHeight="615.0" fitWidth="344.0" layoutX="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Images/Background.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Logo" fitHeight="189.0" fitWidth="200.0" layoutX="56.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/app logo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="615.0" prefWidth="510.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="223.0" layoutY="456.0">
+               <children>
+                  <Button fx:id="SignUpButton" mnemonicParsing="false" onAction="#SignUp" text="Sign up" />
+               </children>
+            </HBox>
+            <VBox layoutX="61.0" layoutY="45.0" prefHeight="348.0" prefWidth="381.0" spacing="50.0">
+               <children>
+                  <HBox prefHeight="23.0" prefWidth="323.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="63.0" text="User name:">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="UserNameField" prefHeight="12.0" prefWidth="149.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="28.0" prefWidth="309.0">
+                     <children>
+                        <Label prefHeight="19.0" prefWidth="58.0" text="Password:">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </Label>
+                        <PasswordField fx:id="passwordfield" prefHeight="18.0" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="323.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="58.0" text="Birth Date:">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </Label>
+                        <DatePicker fx:id="BirthDate" prefHeight="26.0" prefWidth="227.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="40.0" prefHeight="26.0" prefWidth="345.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="87.0" text="Working Hours:">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="WorkingHoursField" prefHeight="12.0" prefWidth="149.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label fx:id="InvalidMessage" prefHeight="37.0" prefWidth="399.0" textFill="#f20404">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

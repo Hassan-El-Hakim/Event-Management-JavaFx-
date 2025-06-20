@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane prefHeight="600" prefWidth="800" style="-fx-background-color: #f5f7fa;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.eventController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #2c3e50; -fx-padding: 15;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="Events Management" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button onAction="#goBack" style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-background-radius: 4; -fx-padding: 8 16 8 16;" text="Back" />
+            <Button onAction="#deleteEvent" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 4; -fx-padding: 8 16 8 16;" text="Delete" />
+        </HBox>
+    </top>
+
+    <center>
+        <ListView fx:id="eventsListView" />
+    </center>
+</BorderPane>
