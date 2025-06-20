@@ -13,9 +13,6 @@ A desktop-based event management system using Java and JavaFX.
 - SceneBuilder
 - IntelliJ
 
-## Screenshots
-![Screenshot](screenshots/ui.png)
-
 ## How to Run
 1. Clone the repo or download ZIP
 2. Open in IntelliJ or your IDE
