@@ -16,7 +16,7 @@ A desktop-based event management system using Java and JavaFX.
 ## How to Run
 1. Clone the repo or download ZIP
 2. Open in IntelliJ or your IDE
-3. Run `Main.java`
+3. Run `HelloApplication.java`
 
 ## Author
 Hassan El Hakim
